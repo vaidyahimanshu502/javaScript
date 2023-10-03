@@ -35,4 +35,15 @@ console.log(+ b) // NaN
 
 //parseInt()
 console.log(parseInt("12345")) // 12345 as a number
+console.log(parseInt('12345f')) // 12345
+console.log(parseInt(134.456)) // 134
+
+//parseFloat()
+console.log(parseFloat('134.456f')) // 134.456
+
+// Boolean()
+console.log(Boolean(100)) // true
+console.log(Boolean(0)) // false
+console.log(Boolean("")) // false
+console.log(Boolean("Hello")) // true
 
