@@ -39,7 +39,7 @@ const person1 = {
 
 const student1 = {
     fname: "Manni",
-    lname: 'Darling'
+    lname: 'Arora'
 }
 
 console.log(person1.details.apply(student1, ["Delhi", "India"]));  // Apply Method takes arguement as an array
@@ -53,7 +53,7 @@ const person2 = {
 
 const student2 = {
     fname: "Manni",
-    lname: 'Darling'
+    lname: 'Arora'
 }
 
 console.log(person1.details.call(student2, "Delhi", "India"));  // It takes arguement separataly rather than array
@@ -62,7 +62,7 @@ console.log(person1.details.call(student2, "Delhi", "India"));  // It takes argu
 
 const person4 = {
     fname: "MANII",
-    lname: "VAIDYA",
+    lname: "Arora",
     fullName: function() {
         return this.fname +" "+this.lname;
     }
@@ -99,7 +99,7 @@ function emp(id, name, salary) {
     return this.id+' '+this.name+' '+this.salary; //similorally we can also create setter
  }
  //creating object
- var emp1 = new emp(10, "Manni Darling", 40000)
+ var emp1 = new emp(10, "Manni Arora", 40000)
  console.log(emp1);
 
  emp1.changeSalary(45000)
@@ -114,7 +114,7 @@ function emp(id, name, salary) {
  //[1]:-Object.create
 
  const employee = {
-    name:'Manni Darling',
+    name:'Manni Arora',
     role: 'Diamond',
     salary: 500000
  }
@@ -127,7 +127,7 @@ function emp(id, name, salary) {
  //[2]:-Object.keys()
 
  var employee1 = {
-    name:'manni darling',
+    name:'manni Arora',
     age:22,
     education:'BCA'
  }
@@ -143,7 +143,7 @@ function emp(id, name, salary) {
 
  //[3]:- Object.value()
  const st = {
-    name: 'Manni Darling',
+    name: 'Manni Arora',
     rall: 24,
     age: 20,
     class: 'UKG'
@@ -158,7 +158,7 @@ function emp(id, name, salary) {
  //[4] :- Object.assign()
 
  let wifeName = {
-    name: 'Manni Darling',
+    name: 'Manni Arora',
     rall: 24,
     age: 20,
     class: 'UKG'
@@ -184,14 +184,14 @@ let relation1 = {wife: wifeName, husband: husbandName}
 console.log(relation1)
 
 //[5] :- Object.getPrototypesOf()
-let empGroup = {firstEmp:"Manni Darling", secondEmp:"Himanshu Vaidya"};
+let empGroup = {firstEmp:"Manni Arora", secondEmp:"Himanshu Vaidya"};
 console.log(Object.getPrototypeOf(empGroup)) //To see the correct output run this in browsers console
 
 //[6]:-Object.freeze()
 let obj = {
     username: 'Himanshu',
-    password: 'ManniDarling'
+    password: 'ManniArora'
 }
 const newUser = Object.freeze(obj);
 obj.password = "123456";
-console.log(newUser) // password doesn't change it still - "ManiDarling";
+console.log(newUser) // password doesn't change it still - "ManiArora";
