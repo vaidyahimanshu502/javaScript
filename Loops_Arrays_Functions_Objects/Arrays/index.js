@@ -94,3 +94,26 @@ let fruitsTwo = ["Banana", "Papaya", "PineApple"];
 
 let concatenatedArr = fruitsOne.concat(fruitsTwo);
 console.log(concatenatedArr);
+
+// Problems ----------------------------------
+//complete the reverseString Function.
+//Do not alter the starter Code.
+
+function reverseString(str){
+    //Implement Your function here
+               // Method 1
+    //     let n = str.length;
+    //     let reversedStr = "";
+    //     for(let i = n-1; i >= 0; i--) {
+    //         reversedStr += str[i];
+    //     }
+        
+        // Method 2
+         let reversedStr = str.split("").reverse().join("");
+        // return reversedStr;
+        
+        // return reversedStr;
+        return reversedStr
+    }
+    console.log(reverseString("Hello"));
+    //Output : "olleH"
