@@ -17,7 +17,7 @@
 
 // 1. alert("Hello Google ! what's Up !!");  // Opening alert box with the task,
 // 2. confirm("Do you want to delete the profile picture?"); // Opening a pop up screen for asking you confirm or not it returns true
-// if press ok and false if press cancel
+// if press ok then true and false if press cancel
 // 3. prompt("Enter any number ...");  // It will also open a pop up and asking the text whatever you write in it it returns
 // that value;
 console.log("Message Consoled Successfully!");
