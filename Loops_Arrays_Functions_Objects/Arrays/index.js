@@ -99,45 +99,55 @@ console.log(concatenatedArr);
 //complete the reverseString Function.
 //Do not alter the starter Code.
 
-function reverseString(str){
-    //Implement Your function here
-               // Method 1
-    //     let n = str.length;
-    //     let reversedStr = "";
-    //     for(let i = n-1; i >= 0; i--) {
-    //         reversedStr += str[i];
-    //     }
-        
-        // Method 2
-         let reversedStr = str.split("").reverse().join("");
-        // return reversedStr;
-        
-        // return reversedStr;
-        return reversedStr
-    }
-    console.log(reverseString("Hello"));
-    //Output : "olleH"
+function reverseString(str) {
+  //Implement Your function here
+  // Method 1
+  //     let n = str.length;
+  //     let reversedStr = "";
+  //     for(let i = n-1; i >= 0; i--) {
+  //         reversedStr += str[i];
+  //     }
 
+  // Method 2
+  let reversedStr = str.split("").reverse().join("");
+  // return reversedStr;
 
-       /**Looping over the array */
-let listOfStudents = ['Gopal', 'Teena','Mohan', 'Sohan', 'Geeta'];
+  // return reversedStr;
+  return reversedStr;
+}
+console.log(reverseString("Hello"));
+//Output : "olleH"
+
+/**Looping over the array */
+let listOfStudents = ["Gopal", "Teena", "Mohan", "Sohan", "Geeta"];
 for (let i = 0; i < listOfStudents.length; i++) {
-    console.log(`Rall no ${i+1} : ${listOfStudents[i]}.`);
+  console.log(`Rall no ${i + 1} : ${listOfStudents[i]}.`);
 }
 
 //Complete the deleteOccur function
 //Do not alter the starter Code.
 let array = [23, 56, 4, 78, 5, 63, 45, 210, 56];
 let ele = 56;
-function deleteOccur(arr,ele){
-   //Implement Your function here
-     for (let i = array.length - 1; i >= 0; i--) {
-        if (array[i] === ele) {
-            array.splice(i, 1);
-        }
+function deleteOccur(arr, ele) {
+  //Implement Your function here
+  for (let i = array.length - 1; i >= 0; i--) {
+    if (array[i] === ele) {
+      array.splice(i, 1);
     }
-    return array;
-};
+  }
+  return array;
+}
 
-console.log(deleteOccur(arr,ele));
+console.log(deleteOccur(arr, ele));
 //Output: [23,4,78,5,63,45,210];
+
+// For .. in  && For... of loops
+// for ..in
+for (let i in listOfStudents) {
+  console.log(`Rall no ${1 + +i} : ${listOfStudents[i]}.`); // here i is a string
+}
+
+// For... of
+for (let student of listOfStudents) {
+  console.log(student);
+}
