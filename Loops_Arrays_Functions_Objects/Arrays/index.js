@@ -151,3 +151,24 @@ for (let i in listOfStudents) {
 for (let student of listOfStudents) {
   console.log(student);
 }
+
+// Question finding duplicates in the array
+//Complete the findDuplicate function
+// Do not alter the starter code.
+
+let arr2 = [4, 2, 34, 4, 1, 12, 1, 4];
+function findDuplicate(arr){
+//Implement your function here
+    let duplArrOfEle = new Array();
+    for(let i =0; i < arr.length; i++) {
+        for(let j = i+1; j < arr.length; j++) {
+            if(arr[i] == arr[j]) {
+                if(!duplArrOfEle.includes(arr[i])) {
+                duplArrOfEle.push(arr[i]);
+                }
+            }
+        }
+    }
+    return duplArrOfEle;
+}    
+console.log(findDuplicate(arr2));
