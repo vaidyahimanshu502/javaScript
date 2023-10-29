@@ -187,3 +187,65 @@ for (let i of inputs) {
   console.log(evenNo);
 }
 console.log(evenNo);
+
+/**Rest vs Spread Operators */
+
+let mayBatch = ["arun", "barun", "tarun", "garun"];
+let juneBatch = ["mohan", "sohan", "tohan"];
+let julyBatch = ["geeta", "sita", "pita", "fita"];
+let augBatch = [];
+
+/** 
+function addStudent(batchName, student) {
+    if(batchName == mayBatch || batchName == juneBatch || batchName == julyBatch || batchName == augBatch) {
+        batchName.push(student);
+    }
+    return batchName;
+}
+let batchName = addStudent(mayBatch, 'Sohan');
+console.log(batchName); */
+
+// adding more students at a time ---- REST OPERATOR '...'
+
+function addStudents(batch, ...students) {
+  for (let i of students) {
+    batch.push(i);
+  }
+  return batch;
+}
+let batch = addStudents(augBatch, "Mohan", "Sohan", "Dohan", "Pohan");
+console.log(batch);
+
+// Spread Operator '...' changes made in old one not couse any changes in the new one
+
+//Expanding / Copying
+let newBatch = [...augBatch]; // it spreading all elements of the arry.
+console.log(newBatch);
+augBatch.push("Geeta");
+console.log(augBatch);
+console.log(newBatch);
+
+// Containate
+let days = ['sunday', 'monday', 'tuesday'];
+let days1 = ['wednesday', 'thrusday', 'friday', 'saturday'];
+
+let allDays = [...days, ...days1];
+console.log(allDays);
+
+
+// Solving the problems to find array of unique elemtns from multiples arrays by using SET DataStructure
+//complete the function mergeArray
+//Do not alter the starter code.
+arr4 = [1,2,4,5,7];
+arr5 = [3,4,6,7,9,0];
+function mergeArray(arr1,arr2){
+    //Implemet your function here
+    let mergedArray = [...arr1, ...arr2];
+    let set = new Set(mergedArray);
+    let setOfUniqueElement = [...set];
+    return setOfUniqueElement;
+}
+console.log(mergeArray(arr4,arr5));
+//Output : [1,2,4,5,7,3,6,9,0]
+
+
