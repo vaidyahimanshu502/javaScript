@@ -117,3 +117,27 @@ function reverseString(str){
     }
     console.log(reverseString("Hello"));
     //Output : "olleH"
+
+
+       /**Looping over the array */
+let listOfStudents = ['Gopal', 'Teena','Mohan', 'Sohan', 'Geeta'];
+for (let i = 0; i < listOfStudents.length; i++) {
+    console.log(`Rall no ${i+1} : ${listOfStudents[i]}.`);
+}
+
+//Complete the deleteOccur function
+//Do not alter the starter Code.
+let array = [23, 56, 4, 78, 5, 63, 45, 210, 56];
+let ele = 56;
+function deleteOccur(arr,ele){
+   //Implement Your function here
+     for (let i = array.length - 1; i >= 0; i--) {
+        if (array[i] === ele) {
+            array.splice(i, 1);
+        }
+    }
+    return array;
+};
+
+console.log(deleteOccur(arr,ele));
+//Output: [23,4,78,5,63,45,210];
