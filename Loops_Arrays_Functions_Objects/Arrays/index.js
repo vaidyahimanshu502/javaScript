@@ -157,18 +157,33 @@ for (let student of listOfStudents) {
 // Do not alter the starter code.
 
 let arr2 = [4, 2, 34, 4, 1, 12, 1, 4];
-function findDuplicate(arr){
-//Implement your function here
-    let duplArrOfEle = new Array();
-    for(let i =0; i < arr.length; i++) {
-        for(let j = i+1; j < arr.length; j++) {
-            if(arr[i] == arr[j]) {
-                if(!duplArrOfEle.includes(arr[i])) {
-                duplArrOfEle.push(arr[i]);
-                }
-            }
+function findDuplicate(arr) {
+  //Implement your function here
+  let duplArrOfEle = new Array();
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        if (!duplArrOfEle.includes(arr[i])) {
+          duplArrOfEle.push(arr[i]);
         }
+      }
     }
-    return duplArrOfEle;
-}    
+  }
+  return duplArrOfEle;
+}
 console.log(findDuplicate(arr2));
+
+// Breaks vs continue;   -- Problems prints only first 5 even numbers
+const inputs = [2, 32, 12, 18, 42, 13, 23, 34, 3, 5, 7, 9, 23];
+const evenNo = [];
+for (let i of inputs) {
+  if (i % 2 != 0) {
+    continue;
+  }
+  evenNo.push(i);
+  if (evenNo.length === 5) {
+    break;
+  }
+  console.log(evenNo);
+}
+console.log(evenNo);
